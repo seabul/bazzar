@@ -24,6 +24,22 @@ export default function RootLayout({ children }) {
                     document.documentElement.classList.remove('dark');
                   }
                 } catch (e) {}
+
+                // Disable right-click context menu across the entire website
+                document.addEventListener('contextmenu', function(e) {
+                  e.preventDefault();
+                }, false);
+
+                // Disable inspect and view-source shortcuts
+                document.addEventListener('keydown', function(e) {
+                  if (
+                    e.key === 'F12' ||
+                    (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) ||
+                    (e.ctrlKey && (e.key === 'u' || e.key === 'U'))
+                  ) {
+                    e.preventDefault();
+                  }
+                }, false);
               })();
             `,
           }}
