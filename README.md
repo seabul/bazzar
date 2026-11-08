@@ -71,3 +71,4 @@ npm run dev
 মোবাইল, ট্যাবলেট এবং ডেস্কটপ সহ যেকোনো ডিভাইসে ব্যবহারের উপযোগী করে তৈরি করা হয়েছে।
 # bazzar
 # assingment-7-with-AI
+# assingment-7-with-AI
